@@ -18,20 +18,20 @@
   position: absolute;
   z-index: -1;
   left: 190px;
-  top: 50px;
-  height: 800px;
+  top: 80px;
+  height: 700px;
 }
 
 #startPagePurplePieces {
-  height: 290px;
-  width: 440px;
+  height: 220px;
+  width: 360px;
   margin-top: 80px;
 }
 
 #startPageGameboard {
   position: absolute;
-  top: 350px;
-  left: 1320px;
+  top: 380px;
+  left: 1360px;
   transform: translate(-50%, -50%); /* Center the image precisely */
   rotate: -17deg;
   max-width: 100%; /* Set max-width to prevent image overflow */
@@ -53,9 +53,9 @@
   font-family: "Roboto", sans-serif;
 }
 
-button {
+/* button {
   width: 150px;
   height: 40px;
   margin: 15px 5px;
   font-family: "Roboto", sans-serif;
-}
+} */

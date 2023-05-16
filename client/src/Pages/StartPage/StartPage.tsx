@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./StartPage.css";
 import RegisterModal from "../../Components/StartPage/RegisterModal/RegisterModal";
 import LoginModal from "../../Components/StartPage/LoginModal/LoginModal";
+import Button from "../../Components/Button/Button";
 
 export default function StartPage() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -18,8 +19,20 @@ export default function StartPage() {
             alt="purplePieces"
           />
           <div>
-            <button onClick={() => setShowLoginModal(true)}>Login</button>
-            <button onClick={() => setShowRegisterModal(true)}>Register</button>
+            {/* <button onClick={() => setShowLoginModal(true)}>Login</button>
+            <button onClick={() => setShowRegisterModal(true)}>Register</button> */}
+            <Button
+              text="Login"
+              width="150px"
+              height="40px"
+              onClick={() => setShowLoginModal(true)}
+            />
+            <Button
+              text="Register"
+              width="150px"
+              height="40px"
+              onClick={() => setShowRegisterModal(true)}
+            />
           </div>
         </div>
 

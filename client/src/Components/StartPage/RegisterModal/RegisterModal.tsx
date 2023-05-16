@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IRegisterForm } from "../../../types";
 import "./RegisterModal.css";
+import Button from "../../Button/Button";
 
 const initialState: IRegisterForm = {
   name: "",
@@ -34,6 +35,7 @@ export default function RegisterModal({
     console.log("name:", inputValues.name);
     console.log("email:", inputValues.email);
     console.log("password:", inputValues.password);
+    setShowRegisterModal(false);
   };
 
   return (
@@ -64,8 +66,15 @@ export default function RegisterModal({
             placeholder="password"
           />
           <br />
-          <button type="submit">Submit</button>
-          <button onClick={() => setShowRegisterModal(false)}>Cancel</button>
+          <Button text="Submit" width="150px" height="40px" />
+          <Button
+            text="Cancel"
+            width="150px"
+            height="40px"
+            onClick={() => setShowRegisterModal(false)}
+          />
+          {/* <button type="submit">Submit</button>
+          <button onClick={() => setShowRegisterModal(false)}>Cancel</button> */}
         </form>
       </div>
     </div>
