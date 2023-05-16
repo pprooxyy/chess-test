@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
-import MainPlaySection from "../../Main-page-components/MainPlaySection/MainPlaySection";
+import MainPlaySection from "../../Components/Main-page-components/MainPlaySection/MainPlaySection";
 
 import "./MainPage.css";
-import MainPuzzles from "../../Main-page-components/MainPuzzles/MainPuzzles";
-import MainNews from "../../Main-page-components/MainNews/MainNews";
+import MainPuzzles from "../../Components/Main-page-components/MainPuzzles/MainPuzzles";
+import MainNews from "../../Components/Main-page-components/MainNews/MainNews";
 
 function MainPage() {
   return (

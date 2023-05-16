@@ -41,3 +41,8 @@ a {
 .nav-item:hover {
   background-color: #e8edf9;
 }
+
+.nav li {
+  display: flex;
+  align-items: center;
+}

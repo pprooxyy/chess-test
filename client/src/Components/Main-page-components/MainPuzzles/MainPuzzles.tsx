@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainPuzzles.css";
-import Button from "../../Components/Button/Button";
+import Button from "../../Button/Button";
 
 function MainPuzzles() {
   const boardStyles = {
