@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ILoginForm } from "../../../types";
 import "./LoginModal.css";
+import Button from "../../Button/Button";
 
 const initialState: ILoginForm = {
   email: "",
@@ -27,14 +28,15 @@ export default function RegisterModal({ setShowLoginModal }: loginModalProps) {
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Действия при отправке формы
-    console.log("Form submitted");
+    console.log("Login form submitted");
     console.log("email:", inputValues.email);
     console.log("password:", inputValues.password);
+    setShowLoginModal(false);
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modal">
+    <div className="modal-overlay-login">
+      <div className="modal-login">
         <form onSubmit={submitHandler}>
           <input
             type="email"
@@ -52,8 +54,17 @@ export default function RegisterModal({ setShowLoginModal }: loginModalProps) {
             placeholder="password"
           />
           <br />
-          <button type="submit">Submit</button>
-          <button onClick={() => setShowLoginModal(false)}>Cancel</button>
+          <div className="button-container">
+            <Button text="Submit" width="150px" height="50px" />
+            <Button
+              text="Cancel"
+              width="150px"
+              height="50px"
+              onClick={() => setShowLoginModal(false)}
+            />
+          </div>
+          {/* <button type="submit">Submit</button>
+          <button onClick={() => setShowLoginModal(false)}>Cancel</button> */}
         </form>
       </div>
     </div>
