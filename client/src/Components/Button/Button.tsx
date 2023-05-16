@@ -3,20 +3,31 @@ import "./Button.css";
 
 type ButtonProps = {
   text: string;
+  p?: string;
+  icon?: string;
   width?: string;
   height?: string;
   className?: string;
 };
 
-function Button({ text, width, height, className }: ButtonProps) {
+function Button({ text, icon, p, width, height, className }: ButtonProps) {
   const buttonStyle = {
     width,
     height,
   };
 
+  const iconStyles = {
+    width: 50,
+    height: 50,
+  };
+
   return (
     <button className={`button-19 ${className}`} style={buttonStyle}>
-      {text}
+      {icon && <img style={iconStyles} src={icon} alt="icon" />}
+      <div className="button-text-wrapper">
+        <h2>{text}</h2>
+        <p>{p}</p>
+      </div>
     </button>
   );
 }
