@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -13,7 +14,7 @@ export default function Navbar() {
           />
         </li>
         <li className="nav-item">
-          <h3>Elbrus Chess</h3>
+          <Link to="/">Elbrus Chess</Link>
         </li>
         <li className="nav-item">
           <img
@@ -21,7 +22,7 @@ export default function Navbar() {
             src="./assets/navbar-icons/king.png"
             alt="elbrus-logo"
           />
-          Play
+          <Link to="/home">Play</Link>
         </li>
         <li className="nav-item">
           <img
@@ -29,7 +30,7 @@ export default function Navbar() {
             src="./assets/navbar-icons/queen.png"
             alt="elbrus-logo"
           />
-          Profile
+          <Link to="/profile">Profile</Link>
         </li>
         <li className="nav-item">
           <img
@@ -37,7 +38,7 @@ export default function Navbar() {
             src="./assets/navbar-icons/bishop.png"
             alt="elbrus-logo"
           />
-          Leaderboard
+          <Link to="/">Leaderboard</Link>
         </li>
         <li className="nav-item">
           <img
@@ -45,7 +46,7 @@ export default function Navbar() {
             src="./assets/navbar-icons/knight.png"
             alt="elbrus-logo"
           />
-          Social
+          <Link to="/friends">Social</Link>
         </li>
         <li className="nav-item">
           <img
@@ -53,7 +54,7 @@ export default function Navbar() {
             src="./assets/navbar-icons/rook.png"
             alt="elbrus-logo"
           />
-          History
+          <Link to="/history">History</Link>
         </li>
         <li className="nav-item log-out">
           <img
@@ -61,7 +62,7 @@ export default function Navbar() {
             src="./assets/navbar-icons/pawn.png"
             alt="elbrus-logo"
           />
-          Logout
+          <Link to="/logout">Logout</Link>
         </li>
       </ul>
     </div>
