@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./StartPage.css";
 import RegisterModal from "../../Components/StartPage/RegisterModal/RegisterModal";
 import LoginModal from "../../Components/StartPage/LoginModal/LoginModal";
+import Button from "../../Components/Button/Button";
 
 export default function StartPage() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -9,7 +10,7 @@ export default function StartPage() {
   return (
     <>
       <div id="startPageContainer">
-        <div id="startPageLeftContainer">
+        <div id="startPageLeftSide">
           <h1 id="startPageBigTitle">Elbrus Chess</h1>
           <h3 id="startPageSmallTitle">Where strategy meets art</h3>
           <img
@@ -18,8 +19,22 @@ export default function StartPage() {
             alt="purplePieces"
           />
           <div>
-            <button onClick={() => setShowLoginModal(true)}>Login</button>
-            <button onClick={() => setShowRegisterModal(true)}>Register</button>
+            {/* <button onClick={() => setShowLoginModal(true)}>Login</button>
+            <button onClick={() => setShowRegisterModal(true)}>Register</button> */}
+            <div id="button-container">
+              <Button
+                text="Login"
+                width="150px"
+                height="60px"
+                onClick={() => setShowLoginModal(true)}
+              />
+              <Button
+                text="Register"
+                width="150px"
+                height="60px"
+                onClick={() => setShowRegisterModal(true)}
+              />
+            </div>
           </div>
         </div>
 

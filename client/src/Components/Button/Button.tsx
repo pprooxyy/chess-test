@@ -8,9 +8,18 @@ type ButtonProps = {
   width?: string;
   height?: string;
   className?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-function Button({ text, icon, p, width, height, className }: ButtonProps) {
+function Button({
+  text,
+  icon,
+  p,
+  width,
+  height,
+  className,
+  onClick,
+}: ButtonProps) {
   const buttonStyle = {
     width,
     height,
@@ -22,7 +31,11 @@ function Button({ text, icon, p, width, height, className }: ButtonProps) {
   };
 
   return (
-    <button className={`button-19 ${className}`} style={buttonStyle}>
+    <button
+      onClick={onClick}
+      className={`button-19 ${className}`}
+      style={buttonStyle}
+    >
       {icon && <img style={iconStyles} src={icon} alt="icon" />}
       <div className="button-text-wrapper">
         <h2>{text}</h2>

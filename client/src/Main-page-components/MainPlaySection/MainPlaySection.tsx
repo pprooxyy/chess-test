@@ -23,7 +23,11 @@ function MainPlaySection() {
             text="Play Online"
             p="Play with someone from Elbrus"
             icon="/assets/browser.png"
+<<<<<<< HEAD:client/src/Main-page-components/MainPlaySection/MainPlaySection.tsx
             width="300px"
+=======
+            width="100px"
+>>>>>>> 327ec991f3524abcab2ed24c32ade4e2fd749a44:client/src/Components/MainPlaySection/MainPlaySection.tsx
             height="100px"
             className="play-online"
           />
@@ -31,7 +35,11 @@ function MainPlaySection() {
             text="Play Computer"
             p="Play vs customizable training bots"
             icon="/assets/bot.png"
+<<<<<<< HEAD:client/src/Main-page-components/MainPlaySection/MainPlaySection.tsx
             width="300px"
+=======
+            width="100px"
+>>>>>>> 327ec991f3524abcab2ed24c32ade4e2fd749a44:client/src/Components/MainPlaySection/MainPlaySection.tsx
             height="100px"
             className="play-bot"
           />
