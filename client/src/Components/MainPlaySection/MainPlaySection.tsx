@@ -23,7 +23,7 @@ function MainPlaySection() {
             text="Play Online"
             p="Play with someone from Elbrus"
             icon="/assets/browser.png"
-            width="250px"
+            width="100px"
             height="100px"
             className="play-online"
           />
@@ -31,7 +31,7 @@ function MainPlaySection() {
             text="Play Computer"
             p="Play vs customizable training bots"
             icon="/assets/bot.png"
-            width="250px"
+            width="100px"
             height="100px"
             className="play-bot"
           />
