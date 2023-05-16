@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
+import Profile from "./Pages/profile/Profile";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Profile/>
+  )
 }
 
 export default App;
