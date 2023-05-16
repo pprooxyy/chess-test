@@ -1,37 +1,45 @@
 #startPageContainer {
   position: relative; /* Added relative positioning */
   overflow: hidden;
+  z-index: 0;
   width: 100%; /* Added width to fit the container */
   height: 100vh; /* Set height to full viewport height */
-  /* background-image: url("../../../public/assets/startPage/bigKnightBG.png"); */
+  background-color: #f4f7fa;
 }
 
-#startPageLeftContainer {
+#startPageLeftSide {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 900px;
-  margin: 40px 0px;
+  margin: 0px;
+}
+
+#button-container {
+  display: flex;
+  gap: 25px;
 }
 
 #startPageKnightBG {
   position: absolute;
-  z-index: -1;
-  left: 190px;
-  top: 80px;
-  height: 700px;
+  z-index: -2;
+  left: 15%;
+  top: 10%;
+  height: 100vh;
 }
 
 #startPagePurplePieces {
   height: 220px;
   width: 360px;
   margin-top: 80px;
+  margin-bottom: 40px;
 }
 
 #startPageGameboard {
-  position: absolute;
-  top: 380px;
-  left: 1360px;
+  position: fixed;
+  z-index: -1;
+  top: 45vh;
+  left: 166vh;
   transform: translate(-50%, -50%); /* Center the image precisely */
   rotate: -17deg;
   max-width: 100%; /* Set max-width to prevent image overflow */
@@ -40,14 +48,14 @@
 }
 
 #startPageBigTitle {
-  font-size: 140px;
+  font-size: 120px;
   font-weight: 900;
   font-family: "Roboto", sans-serif;
-  /* margin: 0px 40px; */
+  margin-top: 20px;
 }
 
 #startPageSmallTitle {
-  font-size: 55px;
+  font-size: 45px;
   font-weight: 500;
   color: #7b61ff;
   font-family: "Roboto", sans-serif;

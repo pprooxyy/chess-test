@@ -35,8 +35,8 @@ export default function RegisterModal({ setShowLoginModal }: loginModalProps) {
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modal">
+    <div className="modal-overlay-login">
+      <div className="modal-login">
         <form onSubmit={submitHandler}>
           <input
             type="email"
@@ -54,13 +54,15 @@ export default function RegisterModal({ setShowLoginModal }: loginModalProps) {
             placeholder="password"
           />
           <br />
-          <Button text="Submit" width="150px" height="40px" />
-          <Button
-            text="Cancel"
-            width="150px"
-            height="40px"
-            onClick={() => setShowLoginModal(false)}
-          />
+          <div className="button-container">
+            <Button text="Submit" width="150px" height="50px" />
+            <Button
+              text="Cancel"
+              width="150px"
+              height="50px"
+              onClick={() => setShowLoginModal(false)}
+            />
+          </div>
           {/* <button type="submit">Submit</button>
           <button onClick={() => setShowLoginModal(false)}>Cancel</button> */}
         </form>

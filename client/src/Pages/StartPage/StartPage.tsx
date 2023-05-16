@@ -10,7 +10,7 @@ export default function StartPage() {
   return (
     <>
       <div id="startPageContainer">
-        <div id="startPageLeftContainer">
+        <div id="startPageLeftSide">
           <h1 id="startPageBigTitle">Elbrus Chess</h1>
           <h3 id="startPageSmallTitle">Where strategy meets art</h3>
           <img
@@ -21,18 +21,20 @@ export default function StartPage() {
           <div>
             {/* <button onClick={() => setShowLoginModal(true)}>Login</button>
             <button onClick={() => setShowRegisterModal(true)}>Register</button> */}
-            <Button
-              text="Login"
-              width="150px"
-              height="40px"
-              onClick={() => setShowLoginModal(true)}
-            />
-            <Button
-              text="Register"
-              width="150px"
-              height="40px"
-              onClick={() => setShowRegisterModal(true)}
-            />
+            <div id="button-container">
+              <Button
+                text="Login"
+                width="150px"
+                height="60px"
+                onClick={() => setShowLoginModal(true)}
+              />
+              <Button
+                text="Register"
+                width="150px"
+                height="60px"
+                onClick={() => setShowRegisterModal(true)}
+              />
+            </div>
           </div>
         </div>
 

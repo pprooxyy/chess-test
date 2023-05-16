@@ -39,8 +39,8 @@ export default function RegisterModal({
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modal">
+    <div className="modal-overlay-register">
+      <div className="modal-register">
         <form onSubmit={submitHandler}>
           <input
             type="text"
@@ -66,13 +66,15 @@ export default function RegisterModal({
             placeholder="password"
           />
           <br />
-          <Button text="Submit" width="150px" height="40px" />
-          <Button
-            text="Cancel"
-            width="150px"
-            height="40px"
-            onClick={() => setShowRegisterModal(false)}
-          />
+          <div className="button-container">
+            <Button text="Submit" width="150px" height="40px" />
+            <Button
+              text="Cancel"
+              width="150px"
+              height="40px"
+              onClick={() => setShowRegisterModal(false)}
+            />
+          </div>
           {/* <button type="submit">Submit</button>
           <button onClick={() => setShowRegisterModal(false)}>Cancel</button> */}
         </form>
