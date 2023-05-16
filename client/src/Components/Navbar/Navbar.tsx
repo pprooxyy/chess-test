@@ -36,7 +36,7 @@ export default function Navbar() {
             Profile
           </li>
         </Link>
-        <Link to="/">
+        <Link to="/leaders">
           <li className="nav-item">
             <img
               className="navbar-icon"
