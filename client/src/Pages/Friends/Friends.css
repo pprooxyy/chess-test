@@ -1,31 +1,38 @@
-.mainContainer{
-    background-color: #E8EDF9;
-}
-
-.mainFriendContainer{ 
+.main-page-wrapper {
+    position: relative;
+    display: flex;
+    background-color: #e8edf9;
+    height: 200vh;
+  }
+  
+  .text-buttons-wrapper-main {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
-    gap: 50px;
-    padding-top: 30px;
-}
-
-.flexLook{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.titleFriends{
+    gap: 60px;
+  }
+  
+  .text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-}
-
-.FriendVsFriend{ 
-    font-size: 20px;
-}
+    gap: 10px;
+  }
+  
+  .text-wrapper h1 {
+    font-size: 3.5em;
+  }
+  
+  .text-wrapper p {
+    font-size: 1.2em;
+  }
+  
+  .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  
