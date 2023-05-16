@@ -8,9 +8,8 @@ import Profile from "./Pages/profile/Profile";
 
 import FriendPage from "./Pages/Friends/Friends";
 
-
 import HistoryPage from "./Pages/History/HistoryPage";
-
+import LeaderboardPage from "./Pages/LeaderboardPage/LeaderboardPage";
 
 function App() {
   return (
@@ -18,9 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/home" element={<MainPage />} />
-        <Route path="/friends" element={<FriendPage/>} />
+        <Route path="/friends" element={<FriendPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/history" element={<HistoryPage />} />
+        <Route path="/leaders" element={<LeaderboardPage />} />
       </Routes>
     </div>
   );
