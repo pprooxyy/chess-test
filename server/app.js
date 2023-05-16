@@ -1,5 +1,5 @@
 require("dotenv").config();
-require("@babel/register");
+const cors = require("cors");
 
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
