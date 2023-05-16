@@ -1,28 +1,25 @@
 import React, { useState } from "react";
-import { IRegisterForm } from "../../../types";
-import "./RegisterModal.css";
+import { ILoginForm } from "../../../types";
+import "./LoginModal.css";
 
-const initialState: IRegisterForm = {
-  name: "",
+const initialState: ILoginForm = {
   email: "",
   password: "",
 };
 
-type registerModalProps = {
-  setShowRegisterModal: React.Dispatch<React.SetStateAction<boolean>>;
+type loginModalProps = {
+  setShowLoginModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function RegisterModal({
-  setShowRegisterModal,
-}: registerModalProps) {
+export default function RegisterModal({ setShowLoginModal }: loginModalProps) {
   const [inputValues, setInputValues] = useState(initialState) as [
-    IRegisterForm,
-    React.Dispatch<React.SetStateAction<IRegisterForm>>
+    ILoginForm,
+    React.Dispatch<React.SetStateAction<ILoginForm>>
   ];
 
   const inputsChangeHandler = (
     e: React.ChangeEvent<HTMLInputElement>,
-    setInputValues: React.Dispatch<React.SetStateAction<IRegisterForm>>
+    setInputValues: React.Dispatch<React.SetStateAction<ILoginForm>>
   ) => {
     setInputValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -31,7 +28,6 @@ export default function RegisterModal({
     e.preventDefault();
     // Действия при отправке формы
     console.log("Form submitted");
-    console.log("name:", inputValues.name);
     console.log("email:", inputValues.email);
     console.log("password:", inputValues.password);
   };
@@ -40,14 +36,6 @@ export default function RegisterModal({
     <div className="modal-overlay">
       <div className="modal">
         <form onSubmit={submitHandler}>
-          <input
-            type="text"
-            name="name"
-            value={inputValues.name}
-            onChange={(e) => inputsChangeHandler(e, setInputValues)}
-            placeholder="name"
-          />
-          <br />
           <input
             type="email"
             name="email"
@@ -65,7 +53,7 @@ export default function RegisterModal({
           />
           <br />
           <button type="submit">Submit</button>
-          <button onClick={() => setShowRegisterModal(false)}>Cancel</button>
+          <button onClick={() => setShowLoginModal(false)}>Cancel</button>
         </form>
       </div>
     </div>
