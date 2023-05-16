@@ -3,8 +3,7 @@ import Button from '../Button/Button'
 import './MainProfilePage.css'
 
 export default function MainProfilePage() {
-  const borderSize = {width: 50,
-  height: 50,}
+  
   return (
     <>
     <div className="main-profile-container">
