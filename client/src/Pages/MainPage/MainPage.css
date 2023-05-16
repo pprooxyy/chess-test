@@ -1,7 +1,10 @@
 .main-page-wrapper {
   display: flex;
+  flex-direction: column;
+  gap: 50px;
   background-color: #e8edf9;
-  height: 200vh;
+  margin-left: 200px;
+  padding: 40px 0;
 }
 
 .text-buttons-wrapper-main {

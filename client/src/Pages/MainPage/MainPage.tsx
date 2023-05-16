@@ -1,15 +1,21 @@
 import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
-import MainPlaySection from "../../Components/MainPlaySection/MainPlaySection";
+import MainPlaySection from "../../Main-page-components/MainPlaySection/MainPlaySection";
 
 import "./MainPage.css";
+import MainPuzzles from "../../Main-page-components/MainPuzzles/MainPuzzles";
+import MainNews from "../../Main-page-components/MainNews/MainNews";
 
 function MainPage() {
   return (
-    <div className="main-page-wrapper">
+    <>
       <Navbar />
-      <MainPlaySection />
-    </div>
+      <div className="main-page-wrapper">
+        <MainPlaySection />
+        <MainPuzzles />
+        <MainNews />
+      </div>
+    </>
   );
 }
 
