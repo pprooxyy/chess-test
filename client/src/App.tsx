@@ -1,11 +1,17 @@
 import React from "react";
 import "./App.css";
-import Profile from "./Pages/profile/Profile";
+
+import Navbar from "./Components/Navbar/Navbar";
+import History from "./Pages/History";
 
 function App() {
   return (
-    <Profile/>
-  )
-}
+    <div className="App">
+      <Navbar />
+      <History />
+    </div>
+  );
+
+
 
 export default App;
