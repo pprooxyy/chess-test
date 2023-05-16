@@ -10,6 +10,6 @@ function App() {
       <History />
     </div>
   );
-}
+
 
 export default App;

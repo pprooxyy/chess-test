@@ -1,0 +1,31 @@
+.mainContainer{
+    background-color: #E8EDF9;
+}
+
+.mainFriendContainer{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    gap: 50px;
+    padding-top: 30px;
+}
+
+.flexLook{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.titleFriends{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.FriendVsFriend{ 
+    font-size: 20px;
+}
