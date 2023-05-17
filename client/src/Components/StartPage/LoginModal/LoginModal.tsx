@@ -2,21 +2,27 @@ import React, { useState } from "react";
 import { ILoginForm } from "../../../types";
 import "./LoginModal.css";
 import Button from "../../Button/Button";
+import { useAppDispatch } from "../../../redux/typesRedux";
+import { loginUser } from "../../../redux/thunk/auth/loginUser";
 
 const initialState: ILoginForm = {
-  email: "",
-  password: "",
+  user_email: "",
+  user_password: "",
 };
 
 type loginModalProps = {
   setShowLoginModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function RegisterModal({ setShowLoginModal }: loginModalProps) {
+
+
+export default function LoginModal({ setShowLoginModal }: loginModalProps) {
   const [inputValues, setInputValues] = useState(initialState) as [
     ILoginForm,
     React.Dispatch<React.SetStateAction<ILoginForm>>
   ];
+
+  const dispatch = useAppDispatch();
 
   const inputsChangeHandler = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -29,8 +35,9 @@ export default function RegisterModal({ setShowLoginModal }: loginModalProps) {
     e.preventDefault();
     // Действия при отправке формы
     console.log("Login form submitted");
-    console.log("email:", inputValues.email);
-    console.log("password:", inputValues.password);
+    console.log("email:", inputValues.user_email);
+    console.log("password:", inputValues.user_password);
+    dispatch(loginUser(inputValues));
     setShowLoginModal(false);
   };
 
@@ -40,16 +47,16 @@ export default function RegisterModal({ setShowLoginModal }: loginModalProps) {
         <form onSubmit={submitHandler}>
           <input
             type="email"
-            name="email"
-            value={inputValues.email}
+            name="user_email"
+            value={inputValues.user_email}
             onChange={(e) => inputsChangeHandler(e, setInputValues)}
             placeholder="email"
           />
           <br />
           <input
             type="password"
-            name="password"
-            value={inputValues.password}
+            name="user_password"
+            value={inputValues.user_password}
             onChange={(e) => inputsChangeHandler(e, setInputValues)}
             placeholder="password"
           />
