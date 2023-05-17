@@ -37,10 +37,6 @@ app.use(
 );
 
 app.use(session(sessionConfig));
-// app.use("/login", (req, res, next) => {
-//   console.log("session=>", req.session);
-//   next();
-// });
 
 app.use(express.static("public"));
 app.use(express.json());

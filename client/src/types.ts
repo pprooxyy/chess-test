@@ -24,3 +24,9 @@ export interface IAuthState {
   loading: boolean;
   error: string | null | undefined;
 }
+
+export interface ILoginState {
+  user: ILoginForm;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+}
