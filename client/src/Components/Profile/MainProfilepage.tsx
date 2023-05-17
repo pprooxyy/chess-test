@@ -14,6 +14,8 @@ export default function MainProfilePage() {
             <img id="profileImage" src="./assets/profilePage/shrekProfile.png"/>
             <Button
             text="Change Avatar"
+            
+            height="50px"
             />
           </div>
           <div className="profileSubDiv">
@@ -48,7 +50,7 @@ export default function MainProfilePage() {
       <Button
         text="History of the last games"
         icon="/assets/browser.png"
-        width="340px"
+        width="360px"
         height="100px"
         className="play-online"
       />

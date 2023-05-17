@@ -7,8 +7,8 @@ export interface IRegisterForm {
 }
 
 export interface ILoginForm {
-  email: string;
-  password: string;
+  user_email: string;
+  user_password: string;
 }
 
 //* Redux
